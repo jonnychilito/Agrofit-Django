@@ -1,0 +1,14 @@
+# 1. Entorno virtual (nunca debe subirse a GitHub)
+venv/
+
+# 2. Base de datos local de desarrollo (si usas SQLite o archivos temporales)
+db.sqlite3
+
+# 3. Archivos multimedia que suban los usuarios (fotos de perfil, rutinas, etc.)
+media/
+
+# 4. Configuración de Visual Studio Code (tu editor)
+.vscode/
+
+# 5. Archivos temporales de Python
+__pycache__/
