@@ -1,3 +1,12 @@
 from django.contrib import admin
+from seguimiento.models import (
+    Progreso,
+    EvaluacionesFisicas,
+    Asistencias,
+)
 
-# Register your models here.
+admin.site.register([
+    Progreso,
+    EvaluacionesFisicas,
+    Asistencias,
+])

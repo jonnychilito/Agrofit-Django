@@ -1,3 +1,14 @@
 from django.contrib import admin
+from centros.models import (
+    CentroFormacion,
+    DependenciasCentro,
+    Fichas,
+    Programas,
+)
 
-# Register your models here.
+admin.site.register([
+    CentroFormacion,
+    DependenciasCentro,
+    Fichas,
+    Programas,
+])

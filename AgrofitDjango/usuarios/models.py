@@ -58,6 +58,11 @@ class UsuariosManager(BaseUserManager):
 
         return usuario
 
+    def create_superuser(self, docusu, password=None, **extra_fields):
+        raise NotImplementedError(
+            "Utiliza el usuario existente de la tabla administradores."
+        )
+
 class Usuarios(AbstractBaseUser):
 
     idusuario = models.AutoField(
@@ -154,6 +159,26 @@ class Usuarios(AbstractBaseUser):
     @property
     def is_active(self):
         return self.estadou == 'ACTIVO'
+    
+    @property
+    def is_staff(self):
+        return self.es_administrador
+
+    @property
+    def is_superuser(self):
+        return self.es_administrador
+
+    @property
+    def es_administrador(self):
+        return Administradores.objects.filter(
+            idusuario_fk=self.pk
+        ).exists()
+
+    def has_perm(self, perm, obj=None):
+        return self.is_superuser
+
+    def has_module_perms(self, app_label):
+        return self.is_superuser
 
     class Meta:
         managed = False

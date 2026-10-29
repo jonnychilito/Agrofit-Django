@@ -90,7 +90,6 @@ DATABASES = {
 
 # Password validation
 # https://docs.djangoproject.com/en/6.1/ref/settings/#auth-password-validators
-AUTH_USER_MODEL = 'usuarios.Usuarios'
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME': 'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
@@ -133,3 +132,9 @@ MAILERS = {
         'BACKEND': 'django.core.mail.backends.console.EmailBackend',
     },
 }
+
+
+AUTH_USER_MODEL = 'usuarios.Usuarios'
+AUTHENTICATION_BACKENDS = [
+    'usuarios.autenticacion.AgrofitBackend',
+]
