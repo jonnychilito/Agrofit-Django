@@ -1,0 +1,105 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-sacle=1">
+        <link rel="stylesheet" href="{% static 'fonts/fontawesome-free-6.1.2-web/css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'fonts/poppins/poppins.css' %}">
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <title>Agrofit</title>
+    </head>
+    <body>
+        <div class="primary_title">
+            <header class="title_header">
+                <i class="fa-solid fa-dot"></i>
+                <h5 class="header_text"><i class="fa-solid fa-circle dot"></i>Sistema Oficial Gimnasio <span class="header_emphasis">SENA ° </span>Agrofit</h5>
+            </header>
+        </div>
+
+        <!--Caja principal-->
+
+        <div class="principal_content">
+            <div class="logo_sena">
+                <img src="{% static 'img/logo_agrofit.png' %}" class="sena_image" alt="logo_sena">
+            </div>
+            <div class="principal_text">
+                <h5 class="text_subtitle">Gestión de Gimnasio y Acondicionamiento SENA</h5>
+            </div>
+
+            <!--BOTONES DE NAVEGACION RAPIDA INICIO / REGISTRO / RECUPERAR-->
+            <nav class="option_principal">
+                <div class="option_ option_selection">
+                    <i class="fa-solid fa-lock icon_principal"></i>
+                    <a href="inicio_sesion.html" class="option_button">Iniciar Sesión</a>
+                </div>
+                <div class="option_">
+                    <i class="fa-solid fa-user-plus icon_principal"></i>
+                    <a href="registro_a.html" class="option_button">Registrarme</a>
+                </div>
+                <div class="option_">
+                    <i class="fa-solid fa-key icon_principal"></i>
+                    <a href="clave1.html" class="option_button">Recuperar</a>
+                </div>
+            </nav>
+
+            <!--SECCION DE INGRESO DE DATOS-->
+            <form class="input_section">
+                <div class="input_document_password">
+
+                    <label class="document">Número de Documento</label>
+                    <div class="input_place">
+                        <i class="fa-regular fa-address-card input_icon"></i>
+                        <input class="input_dp" type="text" id="document_number" placeholder="123456789">
+                    </div>
+
+                    <label class="password">Contraseña</label>
+                    <div class="input_place">
+                        <i class="fa-solid fa-lock input_icon"></i>
+                        <input class="input_dp" type="password" id="password_pin" placeholder="********">
+                        <i class="fa-regular fa-eye input_eye"></i>
+                    </div>
+
+                    <div class="password_recording_place">
+                        <label class="remember_me">
+                            <input type="checkbox" id="remember">
+                            <span>Recordarme</span>
+                        </label>
+
+                        <!--<a href="clave1.html" class="forgot_password">¿Olvidó su Contraseña?</a>-->
+                    </div>
+                    
+                    <!--BOTON DE INGRESAR AL SISTEMA-->
+                    <a href="#" class="enter"><span class="enter_text">Ingresar</span><i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                </div>
+            </form>
+
+            <!--OPCION DE REGISTRO OPCIONAL
+            <div class="register_content">
+                <div class="register_left_content">
+                    <i class="fa-solid fa-user-plus register_icon"></i>
+                    <p class="register_text">¿Aún no tienes cuenta?</p>
+                </div>
+                <a href="registro_a.html" class="register_link">
+                    <p class="register_text text_here">Registrarme aqui <i class="fa-solid fa-arrow-right"></i></p>
+                </a>
+            </div>
+
+            <hr class="line_bottom">
+            
+            <h3 class="access_text">ACCESOS DE PRUEBA RÁPIDOS</h3>
+            <div class="access_buttons">
+                <a href="funcionario.html" class="access_button">Funcionario</a>
+                <a href="entrenador.html" class="access_button">Entrenador</a>
+                <a href="aprendiz.html" class="access_button">Aprendiz</a>
+            </div>
+        </div>-->
+
+        <footer class="footer_ini">
+            <i class="fa-regular fa-circle-question icon_footer"></i>
+            <a href="#" class="footer_question">Centro de Ayuda SENA</a>
+        </footer>
+    </body>
+</html>

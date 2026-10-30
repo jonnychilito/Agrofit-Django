@@ -1,0 +1,59 @@
+*{
+    margin: 0; /* Elimina el margen predeterminado de todos los elementos */
+    padding: 0; /* Elimina el espacio interno predeterminado de todos los elementos */
+    vertical-align: baseline; /* Alinea verticalmente el contenido respecto a la línea base */
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box; /* Hace que el ancho y alto incluyan el padding y el borde */
+    -webkit-box-sizing: border-box; /* Versión para navegadores basados en WebKit */
+    -moz-box-sizing: border-box; /* Versión para navegadores antiguos de Mozilla */
+}
+
+
+html{
+    scroll-behavior: smooth; /* Hace que el desplazamiento hacia los enlaces sea suave */
+}
+
+
+body{
+    min-height: 100vh; /* Establece una altura mínima igual al 100% de la ventana */
+    scroll-behavior: smooth; /* Hace que el desplazamiento de la página sea suave */
+    text-rendering: optimizeSpeed; /* Prioriza la velocidad al mostrar el texto */
+    line-height: 1.5; /* Establece una separación entre las líneas de texto de 1.5 */
+}
+
+
+ul, ol{
+    list-style: none; /* Elimina las viñetas de las listas y la numeración */
+}
+
+
+a{
+    display: block; /* Hace que el enlace se comporte como un elemento de bloque */
+    text-decoration: none; /* Elimina el subrayado predeterminado de los enlaces */
+    font-family: inherit; /* Hace que utilicen la misma fuente que su elemento padre */
+    font-size: inherit; /* Hace que utilicen el mismo tamaño de fuente que su elemento padre */
+    color: inherit; /* Hace que utilicen el mismo color de texto que su elemento padre */
+}
+
+
+p a{
+    display: inline; /* Hace que los enlaces dentro de un párrafo permanezcan en la misma línea */
+}
+
+
+img, video, iframe, picture, figure{
+    max-width: 100%; /* Evita que estos elementos superen el ancho de su contenedor */
+    display: block; /* Hace que estos elementos se comporten como elementos de bloque */
+}
+
+
+form, input, select, textarea, button, label{
+    display: block; /* Hace que estos elementos se comporten como elementos de bloque */
+    font-family: inherit; /* Hace que utilicen la misma fuente que su elemento padre */
+    font-size: inherit; /* Hace que utilicen el mismo tamaño de fuente que su elemento padre */
+    color: inherit; /* Hace que utilicen el mismo color de texto que su elemento padre */
+}
