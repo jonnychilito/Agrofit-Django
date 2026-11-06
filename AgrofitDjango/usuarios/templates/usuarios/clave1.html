@@ -1,0 +1,96 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-sacle=1">
+        <link rel="stylesheet" href="{% static 'fonts/fontawesome-free-6.1.2-web/css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'fonts/poppins/poppins.css' %}">
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <title>Agrofit</title>
+    </head>
+    <body>
+        <div class="primary_title">
+            <header class="title_header">
+                <i class="fa-solid fa-dot"></i>
+                <h5 class="header_text"><i class="fa-solid fa-circle dot"></i>Sistema Oficial Gimnasio <span class="header_emphasis">SENA ° </span>Agrofit</h5>
+            </header>
+        </div>
+
+        <!--Caja principal-->
+
+        <div class="principal_content">
+            <div class="logo_sena">
+                <img src="{% static 'img/logo_agrofit.png' %}" class="sena_image" alt="logo_sena">
+            </div>
+            <div class="principal_text">
+                <h5 class="text_subtitle">Gestión de Gimnasio y Acondicionamiento SENA</h5>
+            </div>
+
+            <!--BOTONES DE NAVEGACION RAPIDA INICIO / REGISTRO / RECUPERAR-->
+            <nav class="option_principal">
+                <div class="option_">
+                    <i class="fa-solid fa-lock icon_principal"></i>
+                    <a href={% url 'inicio' %} class="option_button">Iniciar Sesión</a>
+                </div>
+                <div class="option_">
+                    <i class="fa-solid fa-user-plus icon_principal"></i>
+                    <a href={% url 'registroa' %} class="option_button">Registrarme</a>
+                </div>
+                <div class="option_ option_selection">
+                    <i class="fa-solid fa-key icon_principal"></i>
+                    <a href={% url 'clave1' %} class="option_button">Recuperar</a>
+                </div>
+            </nav>
+
+            <!--BARRA DE PROGRESO-->
+            <div class="progress_password">
+                <div class="circle_progress">
+                    <span class="circle_num num_active">1</span>
+                    <span class="circle_text">Correo</span>
+                </div>
+                <div class="progress_line"></div>
+                <div class="circle_progress">
+                    <span class="circle_num">2</span>
+                    <span class="circle_text">Código</span>
+                </div>
+                <div class="progress_line"></div>
+                <span class="circle_progress">
+                    <span class="circle_num">3</span>
+                    <span class="circle_text">Clave</span>
+                </span>
+            </div>
+            <div class="info_content">
+                <h2 class="info_header">Recuperacion por correo personal</h2>
+                <p class="info_text">Te enviaremos un código de seguridad de 6 dígitos a tu correo personal para verificar tu identidad.</p>
+            </div>
+            
+            <form class="input_section">
+                <div class="input_document_password">
+                    <label class="document">Número de Documento</label>
+                    <div class="input_place">
+                        <i class="fa-regular fa-address-card input_icon"></i>
+                        <input class="input_dp" type="text" id="document_number" placeholder="123456789">
+                    </div>
+
+                    <label class="envelope">Correo electronico personal</label>
+                    <div class="input_place">
+                        <i class="fa-regular fa-envelope input_icon"></i>
+                        <input class="input_dp" type="text" id="envelope" placeholder="aprendizsena@gmail.com">
+                    </div>
+                    <p class="text">Recibiras un código de un solo uso válido por 10 minutos.</p>
+                    <a href={% url "clave2" %} class="enter"><i class="fa-regular fa-paper-plane"></i><span class="enter_text">Enviar codigo de validacion</span>
+                    </a>
+                </div>
+            </form>
+
+            <a href="inicio_sesion.html" class="back_sesion"><i class="fa-solid fa-arrow-left-long"></i> volver al inicio de sesion</a>
+        </div>
+
+        <footer class="footer_ini">
+            <i class="fa-regular fa-circle-question icon_footer"></i>
+            <a href="#" class="footer_question">Centro de Ayuda SENA</a>
+        </footer>
+    </body>
+</html>

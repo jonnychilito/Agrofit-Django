@@ -32,47 +32,67 @@
             <nav class="option_principal">
                 <div class="option_ option_selection">
                     <i class="fa-solid fa-lock icon_principal"></i>
-                    <a href="inicio_sesion.html" class="option_button">Iniciar Sesión</a>
+                    <a href={% url 'inicio' %} class="option_button">Iniciar Sesión</a>
                 </div>
                 <div class="option_">
                     <i class="fa-solid fa-user-plus icon_principal"></i>
-                    <a href="registro_a.html" class="option_button">Registrarme</a>
+                    <a href={% url 'registroa' %} class="option_button">Registrarme</a>
                 </div>
                 <div class="option_">
                     <i class="fa-solid fa-key icon_principal"></i>
-                    <a href="clave1.html" class="option_button">Recuperar</a>
+                    <a href={% url 'clave1' %} class="option_button">Recuperar</a>
                 </div>
             </nav>
 
             <!--SECCION DE INGRESO DE DATOS-->
-            <form class="input_section">
+            <form class="input_section" method="POST">
+                {% csrf_token %}
                 <div class="input_document_password">
 
-                    <label class="document">Número de Documento</label>
+                    <label class="document" for="document_number">Número de Documento</label>
                     <div class="input_place">
                         <i class="fa-regular fa-address-card input_icon"></i>
-                        <input class="input_dp" type="text" id="document_number" placeholder="123456789">
+                        <input 
+                            class="input_dp" 
+                            type="text" 
+                            id="document_number" 
+                            name="documento" 
+                            placeholder="123456789"
+                            required
+                        >
                     </div>
 
-                    <label class="password">Contraseña</label>
+                    <label class="password" for="password_pin">Contraseña</label>
                     <div class="input_place">
                         <i class="fa-solid fa-lock input_icon"></i>
-                        <input class="input_dp" type="password" id="password_pin" placeholder="********">
+                        <input 
+                            class="input_dp" 
+                            type="password" 
+                            id="password_pin" 
+                            placeholder="********"
+                            name="contrasena"
+                            required
+                        >
                         <i class="fa-regular fa-eye input_eye"></i>
                     </div>
 
                     <div class="password_recording_place">
                         <label class="remember_me">
-                            <input type="checkbox" id="remember">
+                            <input type="checkbox" name="recordarme" id="remember">
                             <span>Recordarme</span>
                         </label>
 
                         <!--<a href="clave1.html" class="forgot_password">¿Olvidó su Contraseña?</a>-->
                     </div>
-                    
+                    {% if error %}
+                        <p class="error_message">{{ error }}</p>                    
+                    {% endif %}
+
                     <!--BOTON DE INGRESAR AL SISTEMA-->
-                    <a href="#" class="enter"><span class="enter_text">Ingresar</span><i class="fa-solid fa-arrow-right"></i>
-                    </a>
+                    <button type="submit" class="enter">
+                        <span class="enter_text">Ingresar</span>
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </button>
                 </div>
             </form>
 

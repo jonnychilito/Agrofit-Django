@@ -1,0 +1,108 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-sacle=1">
+        <link rel="stylesheet" href="{% static 'fonts/fontawesome-free-6.1.2-web/css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'fonts/poppins/poppins.css' %}">
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <title>Agrofit</title>
+    </head>
+    <body>
+        <div class="primary_title">
+            <header class="title_header">
+                <i class="fa-solid fa-dot"></i>
+                <h5 class="header_text"><i class="fa-solid fa-circle dot"></i>Sistema Oficial Gimnasio <span class="header_emphasis">SENA ° </span>Agrofit</h5>
+            </header>
+        </div>
+
+        <!--Caja principal-->
+
+        <div class="principal_content">
+            <div class="logo_sena">
+                <img src="{% static 'img/logo_agrofit.png' %}" class="sena_image" alt="logo_sena">
+            </div>
+            <div class="principal_text">
+                <h5 class="text_subtitle">Gestión de Gimnasio y Acondicionamiento SENA</h5>
+            </div>
+
+            <!--BOTONES DE NAVEGACION RAPIDA INICIO / REGISTRO / RECUPERAR-->
+            <nav class="option_principal">
+                <div class="option_">
+                    <i class="fa-solid fa-lock icon_principal"></i>
+                    <a href={% url 'inicio' %} class="option_button">Iniciar Sesión</a>
+                </div>
+                <div class="option_">
+                    <i class="fa-solid fa-user-plus icon_principal"></i>
+                    <a href={% url 'registroa' %} class="option_button">Registrarme</a>
+                </div>
+                <div class="option_ option_selection">
+                    <i class="fa-solid fa-key icon_principal"></i>
+                    <a href={% url 'clave1' %} class="option_button">Recuperar</a>
+                </div>
+            </nav>
+
+            <!--BARRA DE PROGRESO-->
+            <div class="progress_password">
+                <div class="circle_progress">
+                    <span class="circle_num num_active">1</span>
+                    <span class="circle_text">Correo</span>
+                </div>
+                <div class="progress_line progress_line_active"></div>
+                <div class="circle_progress">
+                    <span class="circle_num num_active">2</span>
+                    <span class="circle_text">Código</span>
+                </div>
+                <div class="progress_line"></div>
+                <span class="circle_progress">
+                    <span class="circle_num">3</span>
+                    <span class="circle_text">Clave</span>
+                </span>
+            </div>
+
+
+            <div class="password2_container">
+                <div class="password_envelope">
+                    <i class="fa-regular fa-envelope password_envelope_icon"></i>
+                    <h5 class="password_envelope_text">Correo Enviado a <span id="">aprendiz.sena@gmail.com</span></h5>
+                </div>
+                <div class="password_envelope">
+                    <p class="info_text">Tu Codigo de Validación de Seguridad es: <span class="code_verification">123456</span></p>
+                </div>
+            </div>
+
+            <div class="label_code">
+                <label class="info_header">Código de validación (6 Dígitos)</label>
+            </div>
+
+            <div class="place_code">
+                <i class="fa-solid fa-key"></i>
+                <input type="text" placeholder="Ej: 123456" class="input_dp">
+            </div>
+                <div class="code_forward">
+                    <p class="info_text">¿No recibiste ningun correo?</p>
+                    <a href="#" class="link_color">Reenviar Código</a>
+                </div>
+            <div class="validation_container">
+                <div class="button_password2_back">
+                    <a href="clave1.html">
+                        <span class="text_common">Volver</span>
+                    </a>
+                </div>
+                <div class="button_password2">
+                    <a href={% url "clave3" %}>
+                        <i class="fa-solid fa-check"></i>
+                        <span class="enter_text">Validar Código</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer_ini">
+            <i class="fa-regular fa-circle-question icon_footer"></i>
+            <a href="#" class="footer_question">Centro de Ayuda SENA</a>
+        </footer>
+    </body>
+</html>

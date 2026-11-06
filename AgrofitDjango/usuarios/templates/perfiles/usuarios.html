@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-sacle=1">
+        <link rel="stylesheet" href="ASSETS/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+        <link rel="stylesheet" href="ASSETS/fonts/poppins/poppins.css">
+        <link rel="stylesheet" href="ASSETS/CSS/reset.css">
+        <link rel="stylesheet" href="ASSETS/CSS/styles.css">
+        <title>Agrofit</title>
+    </head>
+    <body>
+        <div class="container_main_user">
+            <!-- Barra lateral -->
+            <aside class="main_sidebar">
+
+                <div class="logo_zone">
+                    <div class="main_logo">
+                        <img src="ASSETS/IMG/logo_agrofit.png" class="main_logo_sena" alt="logo_sena">
+                    </div>
+                    <h2 class="logo_zone_subtitle">GESTIÓN GIMNASIO SENA</h2>
+                </div>
+
+                <div class="current_rol">
+                    <p class="current_rol_text">Funcionario / Administrador</p>
+                </div>
+                
+                <nav class="menu_options">
+                    <a href="funcionario.html" class="menu_options_btn"><i class="fa-solid fa-sliders"></i>Dashboard</a>
+                    <a href="usuarios.html" class="menu_options_btn menu_options_btn_active"><i class="fa-solid fa-users"></i>Usuarios</a>
+                    <a href="rutinas.html" class="menu_options_btn"><i class="fa-solid fa-dumbbell"></i>Rutinas</a>
+                    <a href="evaluaciones.html" class="menu_options_btn"><i class="fa-solid fa-clipboard-list"></i>Evaluaciones</a>
+                    <a href="asistencias.html" class="menu_options_btn"><i class="fa-regular fa-square-check"></i>Asistencias</a>
+                    <a href="configuracion.html" class="menu_options_btn"><i class="fa-solid fa-gear"></i>Configuración</a>
+                </nav>
+
+                <footer class="menu_options_footer">
+                    <div class="current_profile">
+                        <div class="profile_photo">
+                            <img src="ASSETS/IMG/admin.jpg" alt="foto_admin" class="admin_img">
+                        </div>
+                        <div class="profile_info">
+                            <p class="profile_rol">Administrador</p>
+                            <p class="profile_envelope">jchilito07@gmail.com</p>
+                        </div>
+                        <a href="inicio_sesion.html" class="current_profile_icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                        
+                    </div>
+                </footer>
+
+            </aside>
+
+
+            <!-- Contenido principal -->
+            <main class="main_container">
+
+                <!-- Barra superior -->
+                <header class="main_header">
+
+                    <input type="search" placeholder="Buscar aprendiz, ficha, rutina..." class="main_search">
+
+                    <div class="current_profile">
+                        <div class="profile_photo">
+                            <img src="ASSETS/IMG/admin.jpg" alt="foto_admin" class="admin_img">
+                        </div>
+                        <div class="profile_info">
+                            <p class="profile_rol">Administrador</p>
+                            <p class="profile_envelope">jchilito07@gmail.com</p>
+                        </div>
+                    </div>
+
+                </header>
+
+                <div class="main_content">
+                    <div class="users-container">
+                        <!-- Encabezado con título y botón de agregar -->
+                        <div class="users-header">
+                            <div class="header-titles">
+                                <div class="title-main">Gestión de Usuarios</div>
+                                <div class="title-sub">Administra los aprendices e instructores registrados en el sistema.</div>
+                            </div>
+                            <button class="btn-add-user">
+                                <i class="fa-solid fa-plus"></i> Agregar Usuario
+                            </button>
+                        </div>
+
+                        <!-- Tarjeta principal que contiene filtros y tabla -->
+                        <div class="users-card">
+                            <!-- Barra de Filtros -->
+                            <div class="filters-bar">
+                                <div class="search-input-wrapper">
+                                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                    <input type="text" placeholder="Buscar: Nombre o documento..." class="search-input">
+                                </div>
+                                <div class="select-wrapper">
+                                    <select class="filter-select">
+                                        <option>Todas las fichas</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down select-icon"></i>
+                                </div>
+                                <div class="select-wrapper">
+                                    <select class="filter-select">
+                                        <option>Todos los roles</option>
+                                    </select>
+                                    <i class="fa-solid fa-chevron-down select-icon"></i>
+                                </div>
+                            </div>
+
+                            <!-- Tabla de Usuarios -->
+                            <div class="table-responsive">
+                            <table class="users-table">
+                                <thead>
+                                    <tr>
+                                        <th>NOMBRE</th>
+                                        <th>DOCUMENTO</th>
+                                        <th>FICHA</th>
+                                        <th>PROGRAMA</th>
+                                        <th>ESTADO</th>
+                                        <th class="text-right">ACCIONES</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                <!-- Usuario 1 -->
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="avatar-circle">AM</div>
+                                            <div>
+                                            <div class="user-name">Ana María Pérez</div>
+                                            <div class="user-role"><i class="fa-solid fa-graduation-cap"></i> Aprendiz</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="doc-cell">1002345678</td>
+                                    <td><span class="ficha-badge">2670584</span></td>
+                                    <td class="program-cell">Análisis y Des. de Software (ADSO)</td>
+                                    <td><span class="status-badge status-active">&bull; Activo</span></td>
+                                    <td class="text-right">
+                                        <div class="actions-group">
+                                            <button class="btn-icon"><i class="fa-regular fa-pen-to-square"></i></button>
+                                            <button class="btn-icon"><i class="fa-regular fa-trash-can"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Usuario 2 -->
+                                <tr>
+                                    <td>
+                                    <div class="user-cell">
+                                        <div class="avatar-circle">CA</div>
+                                        <div>
+                                            <div class="user-name">Carlos Andrés Rojas</div>
+                                            <div class="user-role"><i class="fa-solid fa-graduation-cap"></i> Aprendiz</div>
+                                        </div>
+                                    </div>
+                                    </td>
+                                    <td class="doc-cell">1023456789</td>
+                                    <td><span class="ficha-badge">2547890</span></td>
+                                    <td class="program-cell">Tecnología en Análisis y Desarrollo de Software (ADSO)</td>
+                                    <td><span class="status-badge status-active">&bull; Activo</span></td>
+                                    <td class="text-right">
+                                        <div class="actions-group">
+                                            <button class="btn-icon"><i class="fa-regular fa-pen-to-square"></i></button>
+                                            <button class="btn-icon"><i class="fa-regular fa-trash-can"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Usuario 3 -->
+                                <tr>
+                                    <td>
+                                    <div class="user-cell">
+                                        <div class="avatar-circle">AP</div>
+                                        <div>
+                                            <div class="user-name">Aprendiz Perez</div>
+                                            <div class="user-role"><i class="fa-solid fa-graduation-cap"></i> Aprendiz</div>
+                                        </div>
+                                    </div>
+                                    </td>
+                                    <td class="doc-cell">1012398456</td>
+                                    <td><span class="ficha-badge">2568900</span></td>
+                                    <td class="program-cell">Tecnólogo en Actividad Física y Deporte</td>
+                                    <td><span class="status-badge status-active">&bull; Activo</span></td>
+                                    <td class="text-right">
+                                        <div class="actions-group">
+                                            <button class="btn-icon"><i class="fa-regular fa-pen-to-square"></i></button>
+                                            <button class="btn-icon"><i class="fa-regular fa-trash-can"></i></button>
+                                        </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Usuario 4 -->
+                                <tr>
+                                    <td>
+                                        <div class="user-cell">
+                                            <div class="avatar-circle">CG</div>
+                                            <div>
+                                                <div class="user-name">Carlos Gómez</div>
+                                                <div class="user-role"><i class="fa-solid fa-graduation-cap"></i> Aprendiz</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="doc-cell">1009876543</td>
+                                    <td><span class="ficha-badge">2541236</span></td>
+                                    <td class="program-cell">Producción Agrícola</td>
+                                    <td><span class="status-badge status-active">&bull; Activo</span></td>
+                                    <td class="text-right">
+                                    <div class="actions-group">
+                                        <button class="btn-icon"><i class="fa-regular fa-pen-to-square"></i></button>
+                                        <button class="btn-icon"><i class="fa-regular fa-trash-can"></i></button>
+                                    </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Usuario 5 -->
+                                <tr>
+                                    <td>
+                                    <div class="user-cell">
+                                        <div class="avatar-circle">LR</div>
+                                        <div>
+                                            <div class="user-name">Laura Ramírez</div>
+                                            <div class="user-role"><i class="fa-solid fa-graduation-cap"></i> Aprendiz</div>
+                                        </div>
+                                    </div>
+                                    </td>
+                                    <td class="doc-cell">1054321987</td>
+                                    <td><span class="ficha-badge">2890123</span></td>
+                                    <td class="program-cell">Gestión Ambiental</td>
+                                    <td><span class="status-badge status-inactive">&bull; Inactivo</span></td>
+                                    <td class="text-right">
+                                    <div class="actions-group">
+                                        <button class="btn-icon"><i class="fa-regular fa-pen-to-square"></i></button>
+                                        <button class="btn-icon"><i class="fa-regular fa-trash-can"></i></button>
+                                    </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Usuario 6 -->
+                                <tr>
+                                    <td>
+                                    <div class="user-cell">
+                                        <div class="avatar-circle">MA</div>
+                                        <div>
+                                            <div class="user-name">Maria Arevalo</div>
+                                            <div class="user-role"><i class="fa-solid fa-graduation-cap"></i> Aprendiz</div>
+                                        </div>
+                                    </div>
+                                    </td>
+                                    <td class="doc-cell">1032890123</td>
+                                    <td><span class="ficha-badge">2670584</span></td>
+                                    <td class="program-cell">Desarrollo Software</td>
+                                    <td><span class="status-badge status-active">&bull; Activo</span></td>
+                                    <td class="text-right">
+                                    <div class="actions-group">
+                                        <button class="btn-icon"><i class="fa-regular fa-pen-to-square"></i></button>
+                                        <button class="btn-icon"><i class="fa-regular fa-trash-can"></i></button>
+                                    </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+
+                            <!-- Paginador / Pie de tabla -->
+                            <div class="table-footer">
+                                <div class="pagination-info">
+                                    Mostrando <span>1 a 6</span> de <span>10</span> usuarios
+                                </div>
+                                <div class="pagination-controls">
+                                    <button class="btn-page" disabled><i class="fa-solid fa-chevron-left"></i></button>
+                                    <span class="page-status">Página 1 de 2</span>
+                                    <button class="btn-page"><i class="fa-solid fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </main>
+        </div>
+        
+
+    </body>
+</html>

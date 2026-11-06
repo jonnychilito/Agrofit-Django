@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-sacle=1">
+        <link rel="stylesheet" href="ASSETS/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+        <link rel="stylesheet" href="ASSETS/fonts/poppins/poppins.css">
+        <link rel="stylesheet" href="ASSETS/CSS/reset.css">
+        <link rel="stylesheet" href="ASSETS/CSS/styles.css">
+        <title>Agrofit</title>
+    </head>
+    <body>
+        <div class="container_main_user">
+            <!-- Barra lateral -->
+            <aside class="main_sidebar">
+
+                <div class="logo_zone">
+                    <div class="main_logo">
+                        <img src="ASSETS/IMG/logo_agrofit.png" class="main_logo_sena" alt="logo_sena">
+                    </div>
+                    <h2 class="logo_zone_subtitle">GESTIÓN GIMNASIO SENA</h2>
+                </div>
+
+                <div class="current_rol">
+                    <p class="current_rol_text">Funcionario / Administrador</p>
+                </div>
+                
+                <nav class="menu_options">
+                    <a href="funcionario.html" class="menu_options_btn"><i class="fa-solid fa-sliders"></i>Dashboard</a>
+                    <a href="usuarios.html" class="menu_options_btn"><i class="fa-solid fa-users"></i>Usuarios</a>
+                    <a href="rutinas.html" class="menu_options_btn"><i class="fa-solid fa-dumbbell"></i>Rutinas</a>
+                    <a href="evaluaciones.html" class="menu_options_btn"><i class="fa-solid fa-clipboard-list"></i>Evaluaciones</a>
+                    <a href="asistencias.html" class="menu_options_btn"><i class="fa-regular fa-square-check"></i>Asistencias</a>
+                    <a href="configuracion.html" class="menu_options_btn menu_options_btn_active"><i class="fa-solid fa-gear"></i>Configuración</a>
+                </nav>
+
+                <footer class="menu_options_footer">
+                    <div class="current_profile">
+                        <div class="profile_photo">
+                            <img src="ASSETS/IMG/admin.jpg" alt="foto_admin" class="admin_img">
+                        </div>
+                        <div class="profile_info">
+                            <p class="profile_rol">Administrador</p>
+                            <p class="profile_envelope">jchilito07@gmail.com</p>
+                        </div>
+                        <a href="inicio_sesion.html" class="current_profile_icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                        
+                    </div>
+                </footer>
+
+            </aside>
+
+
+            <!-- Contenido principal -->
+            <main class="main_container">
+
+                <!-- Barra superior -->
+                <header class="main_header">
+
+                    <input type="search" placeholder="Buscar aprendiz, ficha, rutina..." class="main_search">
+
+                    <div class="current_profile">
+                        <div class="profile_photo">
+                            <img src="ASSETS/IMG/admin.jpg" alt="foto_admin" class="admin_img">
+                        </div>
+                        <div class="profile_info">
+                            <p class="profile_rol">Administrador</p>
+                            <p class="profile_envelope">jchilito07@gmail.com</p>
+                        </div>
+                    </div>
+
+                </header>
+
+                <div class="main_content">
+                    <div class="profile-container">
+                        <!-- Encabezado de la página -->
+                        <div class="profile-header">
+                            <div class="title-main">Configuración de Perfil</div>
+                            <div class="title-sub">Administra tu información personal y ajustes de seguridad en el sistema Agrofit.</div>
+                        </div>
+
+                        <!-- Grid principal de 2 columnas -->
+                        <div class="profile-grid">
+                            
+                            <!-- Columna Izquierda (Perfil e Información Institucional) -->
+                            <div class="profile-col">
+                            
+                            <!-- Tarjeta de Perfil / Avatar -->
+                            <div class="profile-card avatar-card">
+                                <div class="banner-top"></div>
+                                <div class="avatar-section">
+                                    <div class="avatar-wrapper">
+                                        <img src="/ASSETS/IMG/admin.jpg" alt="Avatar Administrador">
+                                        <button class="btn-camera" title="Cambiar foto">
+                                        <i class="fa-solid fa-camera"></i>
+                                        </button>
+                                    </div>
+                                    <div class="user-display-name">Administrador General</div>
+                                    <div class="user-email">admin.agrofit@sena.edu.co</div>
+                                    <span class="role-badge">Funcionario / Administrador</span>
+                                </div>
+                            </div>
+
+                            <!-- Tarjeta de Información Institucional -->
+                            <div class="profile-card">
+                                <div class="section-title">INFORMACIÓN INSTITUCIONAL</div>
+                                
+                                <div class="info-row">
+                                    <span class="info-label">Documento de Identidad:</span>
+                                    <span class="info-value bold-text">CC 12345678</span>
+                                </div>
+
+                                <div class="info-row">
+                                    <span class="info-label">Programa de Formación:</span>
+                                    <span class="info-value">Dirección de Bienestar al Aprendiz SENA</span>
+                                </div>
+
+                                <div class="info-row">
+                                    <span class="info-label">Número de Ficha:</span>
+                                    <span class="info-value ficha-text">2547890</span>
+                                </div>
+
+                                <div class="info-row">
+                                    <span class="info-label">Fecha de Registro:</span>
+                                    <span class="info-value">2021-08-01</span>
+                                </div>
+                            </div>
+
+                            </div>
+
+                            <!-- Columna Derecha (Datos de Contacto y Seguridad) -->
+                            <div class="profile-col">
+                            
+                            <!-- Tarjeta de Datos de Contacto -->
+                            <div class="profile-card">
+                                <div class="section-title">DATOS DE CONTACTO</div>
+                                
+                                <form class="form-section">
+                                    <div class="form-group">
+                                        <label class="form-label">Correo Electrónico Alternativo</label>
+                                        <div class="input-icon-wrapper">
+                                            <i class="fa-regular fa-envelope input-icon"></i>
+                                            <input type="email" value="admin.agrofit@gmail.com" class="form-input">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Teléfono Móvil</label>
+                                        <div class="input-icon-wrapper">
+                                            <i class="fa-solid fa-phone input-icon"></i>
+                                            <input type="text" value="+57 320 111 2233" class="form-input">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Sede SENA</label>
+                                        <div class="input-icon-wrapper">
+                                            <i class="fa-regular fa-building input-icon"></i>
+                                            <input type="text" value="Sede Principal Dirección General" class="form-input">
+                                        </div>
+                                    </div>
+
+                                    <div class="form-actions align-right">
+                                        <button type="button" class="btn-green">Guardar Cambios</button>
+                                    </div>
+                                </form>
+                            </div>
+
+                            <!-- Tarjeta de Seguridad y Contraseña -->
+                            <div class="profile-card">
+                                <div class="section-title">SEGURIDAD Y CONTRASEÑA</div>
+
+                                <form class="form-section">
+                                <div class="form-group">
+                                    <label class="form-label">Contraseña Actual</label>
+                                    <div class="input-icon-wrapper">
+                                        <i class="fa-solid fa-key input-icon"></i>
+                                        <input type="password" value="........" class="form-input">
+                                    </div>
+                                </div>
+
+                                <div class="form-row-2col">
+                                    <div class="form-group">
+                                        <label class="form-label">Nueva Contraseña</label>
+                                        <input type="password" placeholder="Mínimo 8 caracteres" class="form-input no-icon">
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label class="form-label">Confirmar Contraseña</label>
+                                        <input type="password" placeholder="Repite la contraseña" class="form-input no-icon">
+                                    </div>
+                                </div>
+
+                                <div class="form-actions align-right gap-12">
+                                    <button type="button" class="btn-cancel">Cancelar</button>
+                                    <button type="button" class="btn-green">Actualizar Contraseña</button>
+                                </div>
+                                </form>
+                            </div>
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </main>
+        </div>
+        
+
+    </body>
+</html>

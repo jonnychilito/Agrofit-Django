@@ -1,0 +1,185 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-sacle=1">
+        <link rel="stylesheet" href="{% static 'fonts/fontawesome-free-6.1.2-web/css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'fonts/poppins/poppins.css' %}">
+        <link rel="stylesheet" href="{% static 'css/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <title>Agrofit</title>
+    </head>
+    <body>
+        <div class="primary_title">
+            <header class="title_header">
+                <i class="fa-solid fa-dot"></i>
+                <h5 class="header_text"><i class="fa-solid fa-circle dot"></i>Sistema Oficial Gimnasio <span class="header_emphasis">SENA ° </span>Agrofit</h5>
+            </header>
+        </div>
+
+        <!--Caja principal-->
+
+        <div class="principal_content_register">
+            <div class="logo_sena">
+                <img src="{% static 'img/logo_agrofit.png' %}" class="sena_image" alt="logo_sena">
+            </div>
+            <div class="principal_text">
+                <h5 class="text_subtitle">Gestión de Gimnasio y Acondicionamiento SENA</h5>
+            </div>
+
+            <!--BOTONES DE NAVEGACION RAPIDA INICIO / REGISTRO / RECUPERAR-->
+            <nav class="option_principal">
+                <div class="option_">
+                    <i class="fa-solid fa-lock icon_principal"></i>
+                    <a href={% url 'inicio' %} class="option_button">Iniciar Sesión</a>
+                </div>
+                <div class="option_ option_selection">
+                    <i class="fa-solid fa-user-plus icon_principal"></i>
+                    <a href={% url 'registroa' %} class="option_button">Registrarme</a>
+                </div>
+                <div class="option_">
+                    <i class="fa-solid fa-key icon_principal"></i>
+                    <a href={% url 'clave1' %} class="option_button">Recuperar</a>
+                </div>
+            </nav>
+
+            <!--TITULO PRINCIPAL DEL REGISTRO-->
+            <div class="info_content">
+                <h4 class="info_header">Crear Nueva Cuenta en Agrofit SENA</h4>
+                <p class="info_text">Registrate para acceder al gimnasio, rutinas y seguimiento de acondicionamiento fisico.</p>
+            </div>
+
+            <p class="rol_question">¿Cual es tu rol en el SENA?</p>
+            <nav class="rol_selection">
+                <div class="rol_buttons">
+                    <a href={% url 'registroa' %} class="rol_button rol_button_active">Aprendiz</a>
+                    <a href={% url 'registrof' %} class="rol_button">Funcionario</a>
+                    <a href={% url 'registroe' %} class="rol_button">Entrenador</a>
+                </div>
+            </nav>
+
+            <!--CAMPOS PARA EL INGRESO DE DATOS PERSONALES-->
+            <form class="grid_form">
+
+                <div class="field field_full">
+                    <label class="field_title">Nombres y Apellidos Completos *</label>
+                    <div class="sub_field">
+                        <i class="fa-regular fa-user field_icon"></i>
+                        <input type="text" class="field_input" placeholder="Ej: Cristiano Ronaldo">
+                    </div>
+                </div>
+                
+                <div class="field_doc_num">
+                    <div class="field">
+                        <label class="field_title">Tipo Doc. *</label>
+                        <div class="sub_field">
+                            <select class="field_select" name="tipo Documento">
+                                <option value="CC">CC(Cedula)</option>
+                                <option value="TI">TI(Tarjeta)</option>
+                                <option value="CE">CE(Extranjeria)</option>
+                                <option value="PEP">PEP</option>
+                                <option value="PASAPORTE">Pasaporte</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="field">
+                        <label class="field_title">Número de Documento *</label>
+                        <div class="sub_field">
+                            <i class="fa-regular fa-address-card field_icon"></i>
+                            <input type="text" class="field_input" placeholder="1002345678">
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="field">
+                    <label class="field_title">Correo Electronico *</label>
+                    <div class="sub_field">
+                        <i class="fa-regular fa-envelope field_icon"></i>
+                        <input type="text" class="field_input" placeholder="usuario@soy.sena.edu.co">
+                    </div>
+                </div>
+                
+                <div class="field">
+                    <label class="field_title">Telefono de Contacto</label>
+                    <div class="sub_field">
+                        <i class="fa-solid fa-phone field_icon"></i>
+                        <input type="text" class="field_input" placeholder="310 123 4567">
+                    </div>
+                </div>
+                
+                <div class="field">
+                <label class="field_title">Ficha de Caracterizaión *</label>
+                    <div class="sub_field">
+                        <i class="fa-regular fa-file field_icon"></i>
+                        <input type="text" class="field_input" placeholder="Ej: 3387753">
+                    </div> 
+                </div>
+                
+                <div class="field">
+                    <label class="field_title">Programa de Formacion</label>
+                    <div class="sub_field">
+                        <i class="fa-solid fa-book field_icon"></i>
+                        <input type="text" class="field_input" placeholder="Ej: ADSO">
+                    </div>
+                </div>
+                
+                <div class="field field_full">
+                <label class="field_title">Sede / Centro de Formacion Sena *</label>
+                <div class="sub_field">
+                        <i class="fa-regular fa-building field_icon"></i> 
+                        <select class="field_select" name="sede">
+                            <option value="AGRO">Centro Agropecuario</option>
+                            <option value="CTPI">CTPI</option>
+                        </select>
+                </div>
+                </div>
+
+                <div class="field">
+                    <label class="field_title">Contraseña *</label>
+                    <div class="sub_field">
+                        <i class="fa-solid fa-lock field_icon"></i>
+                        <input type="password" class="field_input" placeholder="Minimo 6 caracteres">
+                        <i class="fa-regular fa-eye field_icon  "></i>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="field_title">Confirmar Contraseña *</label>
+                    <div class="sub_field">
+                        <i class="fa-solid fa-lock field_icon"></i>
+                        <input type="password" class="field_input" placeholder="Repite la Clave">
+                        <i class="fa-regular fa-eye field_icon"></i>
+                    </div>
+                </div>
+            </form>
+
+            <!--ZONA BAJA DEL CONTENEDOR / CHECKBOX DE TERMINOS Y CONDICIONES-->
+            <div class="condition_zone">
+                <input type="checkbox" id="checkboxzone" class="checkbox_zone">
+                <label for="checkboxzone" class="checkbox_text">
+                    Acepto el reglamento interno, normas de bioseguridad y declaro encontrarme apto físicamente para realizar actividad en el Gimnasio SENA.
+                </label>
+            </div> 
+
+            <!--BOTON DE REGISTRAR USUARIO / REGISTRARME-->
+            <a href="inicio_sesion.html" class="button_complete">
+                <i class="fa-solid fa-user-plus"></i>
+                <span class="complete_text">Completar Registro</span>
+            </a>
+
+            <!--YA TIENES CUENTA CREADA?-->
+            <div class="log_in_zone">
+                <p class="log_in_question">¿ya tienes una cuenta creada?</p>
+                <a href="inicio_sesion.html" class="link_color">Inicia Sesión aqui</a>
+            </div>
+        </div>
+    <!--
+        <footer class="footer_ini">
+            <i class="fa-regular fa-circle-question icon_footer"></i>
+            <a href="#" class="footer_question">Centro de Ayuda SENA</a>
+        </footer>-->
+    </body>
+</html>

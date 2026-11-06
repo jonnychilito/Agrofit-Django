@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-sacle=1">
+        <link rel="stylesheet" href="ASSETS/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+        <link rel="stylesheet" href="ASSETS/fonts/poppins/poppins.css">
+        <link rel="stylesheet" href="ASSETS/CSS/reset.css">
+        <link rel="stylesheet" href="ASSETS/CSS/styles.css">
+        <title>Agrofit</title>
+    </head>
+    <body>
+        <div class="container_main_user">
+            <!-- Barra lateral -->
+            <aside class="main_sidebar">
+
+                <div class="logo_zone">
+                    <div class="main_logo">
+                        <img src="ASSETS/IMG/logo_agrofit.png" class="main_logo_sena" alt="logo_sena">
+                    </div>
+                    <h2 class="logo_zone_subtitle">GESTIÓN GIMNASIO SENA</h2>
+                </div>
+
+                <div class="current_rol">
+                    <p class="current_rol_text">Funcionario / Administrador</p>
+                </div>
+                
+                <nav class="menu_options">
+                    <a href="funcionario.html" class="menu_options_btn"><i class="fa-solid fa-sliders"></i>Dashboard</a>
+                    <a href="usuarios.html" class="menu_options_btn"><i class="fa-solid fa-users"></i>Usuarios</a>
+                    <a href="rutinas.html" class="menu_options_btn menu_options_btn_active"><i class="fa-solid fa-dumbbell"></i>Rutinas</a>
+                    <a href="evaluaciones.html" class="menu_options_btn"><i class="fa-solid fa-clipboard-list"></i>Evaluaciones</a>
+                    <a href="asistencias.html" class="menu_options_btn"><i class="fa-regular fa-square-check"></i>Asistencias</a>
+                    <a href="configuracion.html" class="menu_options_btn"><i class="fa-solid fa-gear"></i>Configuración</a>
+                </nav>
+
+                <footer class="menu_options_footer">
+                    <div class="current_profile">
+                        <div class="profile_photo">
+                            <img src="ASSETS/IMG/admin.jpg" alt="foto_admin" class="admin_img">
+                        </div>
+                        <div class="profile_info">
+                            <p class="profile_rol">Administrador</p>
+                            <p class="profile_envelope">jchilito07@gmail.com</p>
+                        </div>
+                        <a href="inicio_sesion.html" class="current_profile_icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                        
+                    </div>
+                </footer>
+
+            </aside>
+
+
+            <!-- Contenido principal -->
+            <main class="main_container">
+
+                <!-- Barra superior -->
+                <header class="main_header">
+
+                    <input type="search" placeholder="Buscar aprendiz, ficha, rutina..." class="main_search">
+
+                    <div class="current_profile">
+                        <div class="profile_photo">
+                            <img src="ASSETS/IMG/admin.jpg" alt="foto_admin" class="admin_img">
+                        </div>
+                        <div class="profile_info">
+                            <p class="profile_rol">Administrador</p>
+                            <p class="profile_envelope">jchilito07@gmail.com</p>
+                        </div>
+                    </div>
+
+                </header>
+
+                <div class="main_content">
+                    <div class="routines-container">
+                        <!-- Encabezado con título y botón -->
+                        <div class="routines-header">
+                            <div class="header-titles">
+                            <div class="title-main">Rutinas Disponibles</div>
+                            <div class="title-sub">Explora y gestiona los planes de entrenamiento institucionales SENA.</div>
+                            </div>
+                            <button class="btn-create-routine">
+                            <i class="fa-solid fa-plus"></i> Crear Rutina
+                            </button>
+                        </div>
+
+                        <!-- Estructura Principal: Sidebar Filtros + Grid de Tarjetas -->
+                        <div class="routines-layout">
+                            
+                            <!-- Sidebar de Filtros -->
+                            <div class="filters-sidebar">
+                            <!-- Buscar -->
+                            <div class="filter-group">
+                                <div class="filter-title">BUSCAR</div>
+                                <div class="search-wrapper">
+                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                <input type="text" placeholder="Ej. Hipertrofia..." class="search-input">
+                                </div>
+                            </div>
+
+                            <!-- Filtros Musculares -->
+                            <div class="filter-group">
+                                <div class="filter-title">FILTROS MUSCULARES</div>
+                                <div class="radio-list">
+                                <label class="radio-item active">
+                                    <input type="radio" name="muscle" checked>
+                                    <span>Todos los grupos</span>
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="muscle">
+                                    <span>Pecho</span>
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="muscle">
+                                    <span>Espalda</span>
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="muscle">
+                                    <span>Pierna</span>
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="muscle">
+                                    <span>Brazos</span>
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="muscle">
+                                    <span>Core</span>
+                                </label>
+                                <label class="radio-item">
+                                    <input type="radio" name="muscle">
+                                    <span>Hombros</span>
+                                </label>
+                                </div>
+                            </div>
+
+                            <!-- Nivel -->
+                            <div class="filter-group">
+                                <div class="filter-title">NIVEL</div>
+                                <div class="level-pills">
+                                <button class="pill-btn active">Cualquiera</button>
+                                <button class="pill-btn">Principiante</button>
+                                <button class="pill-btn">Intermedio</button>
+                                <button class="pill-btn">Avanzado</button>
+                                </div>
+                            </div>
+                            </div>
+
+                            <!-- Grid de Rutinas -->
+                            <div class="cards-grid">
+                            
+                            <!-- Card 1 -->
+                            <div class="routine-card">
+                                <div class="card-image-box">
+                                <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?auto=format&fit=crop&w=600&q=80" alt="Hipertrofia Pectoral">
+                                <span class="badge-type badge-green">Fuerza</span>
+                                <span class="badge-time"><i class="fa-regular fa-clock"></i> 45 min</span>
+                                <div class="tags-overlay">
+                                    <span class="tag-white">Pecho</span>
+                                    <span class="tag-white">Brazos</span>
+                                </div>
+                                </div>
+                                <div class="card-body">
+                                <div class="routine-title">Hipertrofia Pectoral</div>
+                                <div class="routine-desc">Rutina enfocada en el desarrollo muscular del pecho y tríceps con sobrecarga progresiva.</div>
+                                </div>
+                                <div class="card-footer">
+                                <div class="meta-item">
+                                    <span class="meta-label">Nivel</span>
+                                    <span class="meta-val green-text">Intermedio</span>
+                                </div>
+                                <div class="meta-item text-right">
+                                    <span class="meta-label">Ejercicios</span>
+                                    <span class="meta-val">5</span>
+                                </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 2 -->
+                            <div class="routine-card">
+                                <div class="card-image-box">
+                                <img src="https://images.unsplash.com/photo-1518611012118-696072aa579a?auto=format&fit=crop&w=600&q=80" alt="Resistencia HIIT">
+                                <span class="badge-type badge-green">Cardio</span>
+                                <span class="badge-time"><i class="fa-regular fa-clock"></i> 30 min</span>
+                                <div class="tags-overlay">
+                                    <span class="tag-white">Pierna</span>
+                                    <span class="tag-white">Core</span>
+                                </div>
+                                </div>
+                                <div class="card-body">
+                                <div class="routine-title">Resistencia HIIT</div>
+                                <div class="routine-desc">Entrenamiento de intervalos de alta intensidad para quema de grasa rápida y capacidad cardiovascular.</div>
+                                </div>
+                                <div class="card-footer">
+                                <div class="meta-item">
+                                    <span class="meta-label">Nivel</span>
+                                    <span class="meta-val green-text">Avanzado</span>
+                                </div>
+                                <div class="meta-item text-right">
+                                    <span class="meta-label">Ejercicios</span>
+                                    <span class="meta-val">5</span>
+                                </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 3 -->
+                            <div class="routine-card">
+                                <div class="card-image-box">
+                                <img src="https://images.unsplash.com/photo-1506126613408-eca07ce68773?auto=format&fit=crop&w=600&q=80" alt="Movilidad Articular">
+                                <span class="badge-type badge-green">Flexibilidad</span>
+                                <span class="badge-time"><i class="fa-regular fa-clock"></i> 20 min</span>
+                                <div class="tags-overlay">
+                                    <span class="tag-white">Core</span>
+                                    <span class="tag-white">Espalda</span>
+                                </div>
+                                </div>
+                                <div class="card-body">
+                                <div class="routine-title">Movilidad Articular</div>
+                                <div class="routine-desc">Secuencia suave para mejorar el rango de movimiento, postura y prevenir lesiones deportivas.</div>
+                                </div>
+                                <div class="card-footer">
+                                <div class="meta-item">
+                                    <span class="meta-label">Nivel</span>
+                                    <span class="meta-val green-text">Principiante</span>
+                                </div>
+                                <div class="meta-item text-right">
+                                    <span class="meta-label">Ejercicios</span>
+                                    <span class="meta-val">4</span>
+                                </div>
+                                </div>
+                            </div>
+
+                            <!-- Card 4 -->
+                            <div class="routine-card">
+                                <div class="card-image-box">
+                                <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Día de Pierna Base">
+                                <span class="badge-type badge-green">Fuerza</span>
+                                <span class="badge-time"><i class="fa-regular fa-clock"></i> 60 min</span>
+                                <div class="tags-overlay">
+                                    <span class="tag-white">Pierna</span>
+                                </div>
+                                </div>
+                                <div class="card-body">
+                                <div class="routine-title">Día de Pierna Base</div>
+                                <div class="routine-desc">Enfoque en sentadillas y prensa para fuerza estructural inferior, cuádriceps y glúteos.</div>
+                                </div>
+                                <div class="card-footer">
+                                <div class="meta-item">
+                                    <span class="meta-label">Nivel</span>
+                                    <span class="meta-val green-text">Avanzado</span>
+                                </div>
+                                <div class="meta-item text-right">
+                                    <span class="meta-label">Ejercicios</span>
+                                    <span class="meta-val">5</span>
+                                </div>
+                                </div>
+                            </div>
+
+                            </div>
+                        </div>
+                        </div>
+
+                    
+                </div>
+            </main>
+        </div>
+        
+
+    </body>
+</html>

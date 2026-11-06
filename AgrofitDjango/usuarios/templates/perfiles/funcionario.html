@@ -1,0 +1,354 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-sacle=1">
+        <link rel="stylesheet" href="{% static 'fonts/fontawesome-free-6.1.2-web/css/all.min.css' %}">
+        <link rel="stylesheet" href="{% static 'fonts/poppins/poppins.css' %}">
+        <link rel="stylesheet" href="{% static 'CSS/reset.css' %}">
+        <link rel="stylesheet" href="{% static 'CSS/scroll.css' %}">
+        <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+        <title>Agrofit</title>
+    </head>
+    <body>
+        <div class="container_main_user">
+            <!-- Barra lateral -->
+            <aside class="main_sidebar">
+
+                <div class="logo_zone">
+                    <div class="main_logo">
+                        <img src="{% static 'IMG/logo_agrofit.png' %}" class="main_logo_sena" alt="logo_sena">
+                    </div>
+                    <h2 class="logo_zone_subtitle">GESTIÓN GIMNASIO SENA</h2>
+                </div>
+
+                <div class="current_rol">
+                    <p class="current_rol_text">Funcionario / Administrador</p>
+                </div>
+                
+                <nav class="menu_options">
+                    <a href="{% url 'funcionario' %}" class="menu_options_btn menu_options_btn_active"><i class="fa-solid fa-sliders"></i>Dashboard</a>
+                    <a href="{% url 'usuarios' %}" class="menu_options_btn"><i class="fa-solid fa-users"></i>Usuarios</a>
+                    <a href="{% url 'rutinas' %}" class="menu_options_btn"><i class="fa-solid fa-dumbbell"></i>Rutinas</a>
+                    <a href="{% url 'evaluaciones' %}" class="menu_options_btn"><i class="fa-solid fa-clipboard-list"></i>Evaluaciones</a>
+                    <a href="{% url 'asistencias' %}" class="menu_options_btn"><i class="fa-regular fa-square-check"></i>Asistencias</a>
+                    <a href="{% url 'configuracion' %}" class="menu_options_btn"><i class="fa-solid fa-gear"></i>Configuración</a>
+                </nav>
+
+                <footer class="menu_options_footer">
+                    <div class="current_profile">
+                        <div class="profile_photo">
+                            <img src="{% static 'IMG/admin.jpg' %}" alt="foto_admin" class="admin_img">
+                        </div>
+                        <div class="profile_info">
+                            <p class="profile_rol">Administrador</p>
+                            <p class="profile_envelope">jchilito07@gmail.com</p>
+                        </div>
+                        <a href="{% url 'inicio' %}" class="current_profile_icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                        
+                    </div>
+                </footer>
+
+            </aside>
+
+
+            <!-- Contenido principal -->
+            <main class="main_container">
+
+                <!-- Barra superior -->
+                <header class="main_header">
+
+                    <input type="search" placeholder="Buscar aprendiz, ficha, rutina..." class="main_search">
+
+                    <div class="current_profile">
+                        <div class="profile_photo">
+                            <img src="ASSETS/IMG/admin.jpg" alt="foto_admin" class="admin_img">
+                        </div>
+                        <div class="profile_info">
+                            <p class="profile_rol">Administrador</p>
+                            <p class="profile_envelope">jchilito07@gmail.com</p>
+                        </div>
+                    </div>
+
+                </header>
+
+                <div class="main_content">
+                    <div class="dashboard-header">
+                        <div class="header-titles">
+                        <div class="title-main">Hola, Administrador</div>
+                        <div class="title-sub">Aquí está el resumen de actividad de hoy.</div>
+                        </div>
+                        <div class="date-badge">
+                        <i class="fa-regular fa-calendar"></i>
+                        <span>29 de agosto de 2026</span>
+                        </div>
+                    </div>
+
+                    <!-- Tarjetas KPI Grid -->
+                    <div class="kpi-grid">
+                        <!-- Card 1 -->
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <span>APRENDICES ACTIVOS</span>
+                                <div class="kpi-icon icon-green-light">
+                                <i class="fa-solid fa-user-group"></i>
+                                </div>
+                            </div>
+                            <div class="kpi-value-container">
+                                <span class="kpi-value">342</span>
+                                <span class="badge badge-green"><i class="fa-solid fa-arrow-up-right"></i> 12%</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 2 -->
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <span>ASISTENCIAS HOY</span>
+                                <div class="kpi-icon icon-green-light">
+                                <i class="fa-solid fa-clipboard-check"></i>
+                                </div>
+                            </div>
+                            <div class="kpi-value-container">
+                                <span class="kpi-value text-green">87</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 3 -->
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <span>RUTINAS ASIGNADAS HOY</span>
+                                <div class="kpi-icon icon-green-light">
+                                <i class="fa-solid fa-dumbbell"></i>
+                                </div>
+                            </div>
+                            <div class="kpi-value-container">
+                                <span class="kpi-value">24</span>
+                            </div>
+                        </div>
+
+                        <!-- Card 4 -->
+                        <div class="kpi-card">
+                            <div class="kpi-header">
+                                <span>EVALUACIONES PENDIENTES</span>
+                                <div class="kpi-icon icon-red-light">
+                                <i class="fa-solid fa-chart-line"></i>
+                                </div>
+                            </div>
+                            <div class="kpi-value-container">
+                                <span class="kpi-value">2</span>
+                                <span class="badge badge-red">Requiere atención</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contenido Inferior Grid -->
+                    <div class="main-content-grid">
+                        <!-- Gráfica Semanal -->
+                        <div class="content-card chart-card">
+                            <div class="card-header">
+                                <div>
+                                    <div class="card-title">Actividad Semanal (Asistencias)</div>
+                                    <div class="card-subtitle">Flujo de usuarios e ingresos registrados en la semana en curso</div>
+                                </div>
+                                <div class="chart-header-right">
+                                    <span class="badge badge-green-soft">Promedio: 129 / día</span>
+                                    <i class="fa-solid fa-ellipsis-vertical options-icon"></i>
+                                </div>
+                            </div>
+
+                            <!-- Diagrama de barras -->
+                            <div class="bars-container">
+                                <div class="bar-group">
+                                    <div class="bar-track"><div class="bar-fill" style="height: 55%;"></div></div>
+                                    <span class="bar-label">Lun</span>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar-track"><div class="bar-fill" style="height: 80%;"></div></div>
+                                    <span class="bar-label">Mar</span>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar-track"><div class="bar-fill" style="height: 65%;"></div></div>
+                                    <span class="bar-label">Mié</span>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar-track"><div class="bar-fill active-bar" style="height: 90%;"></div></div>
+                                    <span class="bar-label">Jue</span>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar-track"><div class="bar-fill" style="height: 80%;"></div></div>
+                                    <span class="bar-label">Vie</span>
+                                </div>
+                                <div class="bar-group">
+                                    <div class="bar-track"><div class="bar-fill" style="height: 45%;"></div></div>
+                                    <span class="bar-label">Sáb</span>
+                                </div>
+                            </div>
+
+                            <div class="chart-footer">
+                                <span>Meta diaria institucional: 100 ingresos</span>
+                                <a href="#" class="report-link">Ver reporte detallado &rarr;</a>
+                            </div>
+                        </div>
+
+                        <!-- Panel Lateral Derecho -->
+                        <div class="content-card quick-actions-card">
+                            <div class="card-header-simple">
+                                <div class="card-title">Accesos Rápidos</div>
+                                <div class="card-subtitle">Acciones frecuentes para la gestión diaria del gimnasio.</div>
+                            </div>
+
+                            <div class="actions-buttons">
+                                <button class="btn btn-outline">
+                                    <i class="fa-solid fa-user-plus"></i> Crear Usuario
+                                </button>
+                                <button class="btn btn-outline">
+                                    <i class="fa-regular fa-file-lines"></i> Ver Evaluaciones
+                                </button>
+                            </div>
+
+                            <!-- Capacidad / Aforo -->
+                            <div class="capacity-box">
+                                <div class="capacity-header">
+                                    <span class="capacity-title">Capacidad en Sala Ahora</span>
+                                    <span class="capacity-value">27 / 60 personas</span>
+                                </div>
+                                <div class="progress-bar">
+                                    <div class="progress-fill" style="width: 45%;"></div>
+                                </div>
+                                <span class="capacity-status">Aforo óptimo (45% de ocupación)</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta Independiente: Asistencias en Tiempo Real -->
+                    <div class="card-standalone">
+                    
+                    <div class="realtime-header">
+                        <div>
+                        <div class="card-title">Asistencias en Tiempo Real</div>
+                        <div class="card-subtitle">Usuarios actualmente entrenando en las instalaciones</div>
+                        </div>
+                        <a href="#" class="view-all-link">Ver todas las asistencias &rarr;</a>
+                    </div>
+
+                    <div class="table-responsive">
+                        <table class="realtime-table">
+                        <thead>
+                            <tr>
+                            <th>APRENDIZ</th>
+                            <th>FICHA / PROGRAMA</th>
+                            <th>HORA INGRESO</th>
+                            <th>ESTADO</th>
+                            <th class="text-right">ACCIÓN</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Fila 1 -->
+                            <tr>
+                            <td>
+                                <div class="user-cell">
+                                <div class="avatar-circle">MA</div>
+                                <div>
+                                    <div class="user-name">Maria Arevalo</div>
+                                    <div class="user-id">CC 1032890123</div>
+                                </div>
+                                </div>
+                            </td>
+                            <td><span class="ficha-num">2670584</span> <span class="program-name">Desarrollo Software</span></td>
+                            <td class="time-cell">08:15 AM</td>
+                            <td><span class="status-badge status-active">&bull; En sala</span></td>
+                            <td class="text-right">
+                                <button class="btn-action btn-active">Marcar Salida</button>
+                            </td>
+                            </tr>
+
+                            <!-- Fila 2 -->
+                            <tr>
+                            <td>
+                                <div class="user-cell">
+                                <div class="avatar-circle">JC</div>
+                                <div>
+                                    <div class="user-name">Juan Carlos Rojas</div>
+                                    <div class="user-id">CC 1045781290</div>
+                                </div>
+                                </div>
+                            </td>
+                            <td><span class="ficha-num">2568900</span> <span class="program-name">Actividad Física</span></td>
+                            <td class="time-cell">07:45 AM</td>
+                            <td><span class="status-badge status-active">&bull; En sala</span></td>
+                            <td class="text-right">
+                                <button class="btn-action btn-active">Marcar Salida</button>
+                            </td>
+                            </tr>
+
+                            <!-- Fila 3 -->
+                            <tr>
+                            <td>
+                                <div class="user-cell">
+                                <div class="avatar-circle">LM</div>
+                                <div>
+                                    <div class="user-name">Laura Mendoza</div>
+                                    <div class="user-id">CC 1019283746</div>
+                                </div>
+                                </div>
+                            </td>
+                            <td><span class="ficha-num">2547890</span> <span class="program-name">Sistemas</span></td>
+                            <td class="time-cell">07:30 AM</td>
+                            <td><span class="status-text">Salió 09:10 AM</span></td>
+                            <td class="text-right">
+                                <span class="action-finished">Finalizado</span>
+                            </td>
+                            </tr>
+
+                            <!-- Fila 4 -->
+                            <tr>
+                            <td>
+                                <div class="user-cell">
+                                <div class="avatar-circle">AM</div>
+                                <div>
+                                    <div class="user-name">Ana María Pérez</div>
+                                    <div class="user-id">CC 1002345678</div>
+                                </div>
+                                </div>
+                            </td>
+                            <td><span class="ficha-num">2670584</span> <span class="program-name">Análisis y Des. de Software (ADSO)</span></td>
+                            <td class="time-cell">08:30 AM</td>
+                            <td><span class="status-badge status-active">&bull; En sala</span></td>
+                            <td class="text-right">
+                                <button class="btn-action btn-active">Marcar Salida</button>
+                            </td>
+                            </tr>
+
+                            <!-- Fila 5 -->
+                            <tr>
+                            <td>
+                                <div class="user-cell">
+                                <div class="avatar-circle">AM</div>
+                                <div>
+                                    <div class="user-name">Ana María Pérez</div>
+                                    <div class="user-id">CC 1002345678</div>
+                                </div>
+                                </div>
+                            </td>
+                            <td><span class="ficha-num">2670584</span> <span class="program-name">Análisis y Des. de Software (ADSO)</span></td>
+                            <td class="time-cell">08:15 AM</td>
+                            <td><span class="status-text">Salió 09:30 AM</span></td>
+                            <td class="text-right">
+                                <span class="action-finished">Finalizado</span>
+                            </td>
+                            </tr>
+                        </tbody>
+                        </table>
+                    </div>
+
+                    </div>
+
+                    
+                </div>
+            </main>
+        </div>
+        
+
+    </body>
+</html>

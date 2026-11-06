@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-sacle=1">
+        <link rel="stylesheet" href="ASSETS/fonts/fontawesome-free-6.1.2-web/css/all.min.css">
+        <link rel="stylesheet" href="ASSETS/fonts/poppins/poppins.css">
+        <link rel="stylesheet" href="ASSETS/CSS/reset.css">
+        <link rel="stylesheet" href="ASSETS/CSS/styles.css">
+        <title>Agrofit</title>
+    </head>
+    <body>
+        <div class="container_main_user">
+            <!-- Barra lateral -->
+            <aside class="main_sidebar">
+
+                <div class="logo_zone">
+                    <div class="main_logo">
+                        <img src="ASSETS/IMG/logo_agrofit.png" class="main_logo_sena" alt="logo_sena">
+                    </div>
+                    <h2 class="logo_zone_subtitle">GESTIÓN GIMNASIO SENA</h2>
+                </div>
+
+                <div class="current_rol">
+                    <p class="current_rol_text">Funcionario / Administrador</p>
+                </div>
+                
+                <nav class="menu_options">
+                    <a href="funcionario.html" class="menu_options_btn"><i class="fa-solid fa-sliders"></i>Dashboard</a>
+                    <a href="usuarios.html" class="menu_options_btn"><i class="fa-solid fa-users"></i>Usuarios</a>
+                    <a href="rutinas.html" class="menu_options_btn"><i class="fa-solid fa-dumbbell"></i>Rutinas</a>
+                    <a href="evaluaciones.html" class="menu_options_btn menu_options_btn_active"><i class="fa-solid fa-clipboard-list"></i>Evaluaciones</a>
+                    <a href="asistencias.html" class="menu_options_btn"><i class="fa-regular fa-square-check"></i>Asistencias</a>
+                    <a href="configuracion.html" class="menu_options_btn"><i class="fa-solid fa-gear"></i>Configuración</a>
+                </nav>
+
+                <footer class="menu_options_footer">
+                    <div class="current_profile">
+                        <div class="profile_photo">
+                            <img src="ASSETS/IMG/admin.jpg" alt="foto_admin" class="admin_img">
+                        </div>
+                        <div class="profile_info">
+                            <p class="profile_rol">Administrador</p>
+                            <p class="profile_envelope">jchilito07@gmail.com</p>
+                        </div>
+                        <a href="inicio_sesion.html" class="current_profile_icon"><i class="fa-solid fa-arrow-right-from-bracket"></i></a>
+                        
+                    </div>
+                </footer>
+
+            </aside>
+
+
+            <!-- Contenido principal -->
+            <main class="main_container">
+
+                <!-- Barra superior -->
+                <header class="main_header">
+
+                    <input type="search" placeholder="Buscar aprendiz, ficha, rutina..." class="main_search">
+
+                    <div class="current_profile">
+                        <div class="profile_photo">
+                            <img src="ASSETS/IMG/admin.jpg" alt="foto_admin" class="admin_img">
+                        </div>
+                        <div class="profile_info">
+                            <p class="profile_rol">Administrador</p>
+                            <p class="profile_envelope">jchilito07@gmail.com</p>
+                        </div>
+                    </div>
+
+                </header>
+
+                <div class="main_content">
+                    <div class="evaluations-container">
+                        <!-- Encabezado -->
+                        <div class="evaluations-header">
+                            <div class="header-titles">
+                            <div class="title-main">Evaluaciones Físicas y Antropométricas</div>
+                            <div class="title-sub">Diagnóstico, cálculo de IMC, porcentaje graso y seguimiento biomédico para aprendices.</div>
+                            </div>
+                            <button class="btn-agendar">
+                            <i class="fa-solid fa-plus"></i> Agendar / Registrar Evaluación
+                            </button>
+                        </div>
+
+                        <!-- Métricas / Tarjetas Superiores -->
+                        <div class="metrics-grid">
+                            <div class="metric-card">
+                            <div class="metric-data">
+                                <span class="metric-label">TOTAL EVALUACIONES</span>
+                                <span class="metric-value">3</span>
+                            </div>
+                            <div class="metric-icon icon-green">
+                                <i class="fa-regular fa-clipboard"></i>
+                            </div>
+                            </div>
+
+                            <div class="metric-card">
+                            <div class="metric-data">
+                                <span class="metric-label">CITAS PENDIENTES</span>
+                                <span class="metric-value orange-text">2</span>
+                            </div>
+                            <div class="metric-icon icon-orange">
+                                <i class="fa-regular fa-clock"></i>
+                            </div>
+                            </div>
+
+                            <div class="metric-card">
+                            <div class="metric-data">
+                                <span class="metric-label">COMPLETADAS CON ÉXITO</span>
+                                <span class="metric-value green-text">1</span>
+                            </div>
+                            <div class="metric-icon icon-green-light">
+                                <i class="fa-regular fa-circle-check"></i>
+                            </div>
+                            </div>
+                        </div>
+
+                        <!-- Tarjeta Principal: Filtros y Tabla -->
+                        <div class="evaluations-card">
+                            <div class="filters-bar">
+                            <div class="search-wrapper">
+                                <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                                <input type="text" placeholder="Buscar por aprendiz o tipo de cita..." class="search-input">
+                            </div>
+                            <div class="filter-pills">
+                                <button class="pill-btn active">Todas</button>
+                                <button class="pill-btn">Pendientes</button>
+                                <button class="pill-btn">Completadas</button>
+                            </div>
+                            </div>
+
+                            <!-- Tabla -->
+                            <div class="table-responsive">
+                            <table class="evaluations-table">
+                                <thead>
+                                <tr>
+                                    <th>APRENDIZ / USUARIO</th>
+                                    <th>TIPO DE EVALUACIÓN</th>
+                                    <th>FECHA Y HORA</th>
+                                    <th>IMC / GRASA %</th>
+                                    <th>INSTRUCTOR</th>
+                                    <th>ESTADO</th>
+                                    <th class="text-right">ACCIONES</th>
+                                </tr>
+                                </thead>
+                                <tbody>
+                                <!-- Fila 1 -->
+                                <tr>
+                                    <td>
+                                    <div class="user-name">Carlos Díaz</div>
+                                    <div class="user-sub">CC 1009876543 &bull; Ficha 2541236</div>
+                                    </td>
+                                    <td class="eval-type">Ingreso Nuevo</td>
+                                    <td class="datetime-cell">
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <span class="date-part">2026-08-21</span>
+                                    <span class="time-part green-text">10:00 AM</span>
+                                    </td>
+                                    <td class="imc-cell">
+                                    <strong>23.9 IMC</strong> <span class="grasa-text">(17.5% grasa)</span>
+                                    </td>
+                                    <td class="instructor-cell">Dayana Galvis</td>
+                                    <td><span class="status-badge status-pending">Pendiente</span></td>
+                                    <td class="text-right">
+                                    <div class="actions-group">
+                                        <button class="btn-icon-view"><i class="fa-regular fa-eye"></i></button>
+                                        <button class="btn-completar">Completar</button>
+                                    </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Fila 2 -->
+                                <tr>
+                                    <td>
+                                    <div class="user-name">Ana Gómez</div>
+                                    <div class="user-sub">CC 1002345678 &bull; Ficha 2670584</div>
+                                    </td>
+                                    <td class="eval-type">Control Mensual</td>
+                                    <td class="datetime-cell">
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <span class="date-part">2026-08-21</span>
+                                    <span class="time-part green-text">11:30 AM</span>
+                                    </td>
+                                    <td class="imc-cell">
+                                    <strong>22.1 IMC</strong> <span class="grasa-text">(21% grasa)</span>
+                                    </td>
+                                    <td class="instructor-cell">Dayana Galvis</td>
+                                    <td><span class="status-badge status-pending">Pendiente</span></td>
+                                    <td class="text-right">
+                                    <div class="actions-group">
+                                        <button class="btn-icon-view"><i class="fa-regular fa-eye"></i></button>
+                                        <button class="btn-completar">Completar</button>
+                                    </div>
+                                    </td>
+                                </tr>
+
+                                <!-- Fila 3 -->
+                                <tr>
+                                    <td>
+                                    <div class="user-name">Carlos Andrés Rojas</div>
+                                    <div class="user-sub">CC 1023456789 &bull; Ficha 2547890</div>
+                                    </td>
+                                    <td class="eval-type">Seguimiento Físico</td>
+                                    <td class="datetime-cell">
+                                    <i class="fa-regular fa-calendar"></i>
+                                    <span class="date-part">2023-10-10</span>
+                                    <span class="time-part green-text">09:00 AM</span>
+                                    </td>
+                                    <td class="imc-cell">
+                                    <strong>24 IMC</strong> <span class="grasa-text">(16.2% grasa)</span>
+                                    </td>
+                                    <td class="instructor-cell">Dayana Galvis</td>
+                                    <td><span class="status-badge status-completed">Completada</span></td>
+                                    <td class="text-right">
+                                    <div class="actions-group">
+                                        <button class="btn-icon-view"><i class="fa-regular fa-eye"></i></button>
+                                    </div>
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            </div>
+                        </div>
+                    </div>
+
+                    
+                </div>
+            </main>
+        </div>
+        
+
+    </body>
+</html>
